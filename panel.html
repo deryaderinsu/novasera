@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Seranova – Akıllı Tarım Paneli</title>
+<title>Novasera – Akıllı Tarım Paneli</title>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#1f8a4c">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Seranova">
+<meta name="apple-mobile-web-app-title" content="Novasera">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
@@ -256,7 +256,7 @@ input[type=range]{width:100%;accent-color:var(--primary)}
   <aside class="sidebar" id="sidebar">
     <div class="brand">
       <div class="brand-logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 7-10 16-10 0 9-4 17-9 17z"/><path d="M4 21c3-6 6-9 10-12"/></svg></div>
-      <div><h1>Seranova</h1><small>Akıllı Tarım Sistemi</small></div>
+      <div><h1>Novasera</h1><small>Akıllı Tarım Sistemi</small></div>
     </div>
     <nav class="nav" id="nav">
       <div class="nav-label">Genel</div>
@@ -521,7 +521,7 @@ input[type=range]{width:100%;accent-color:var(--primary)}
     <section class="view" id="view-telegram">
       <div class="grid g-main">
         <div class="card">
-          <div class="card-h"><h3>@SeranovaBot</h3><span class="tag ok" style="margin-left:auto">Bağlı</span></div>
+          <div class="card-h"><h3>@NovaseraBot</h3><span class="tag ok" style="margin-left:auto">Bağlı</span></div>
           <div class="chat" id="chat"></div>
           <div class="cmds">
             <button class="btn ghost" data-cmd="/durum">/durum</button>
@@ -543,7 +543,7 @@ input[type=range]{width:100%;accent-color:var(--primary)}
       </div>
     </section>
 
-    <div class="footer-note" id="footNote">Seranova v0.1 · Demo sürümü – gösterilen veriler simülasyondur</div>
+    <div class="footer-note" id="footNote">Novasera v0.1 · Demo sürümü – gösterilen veriler simülasyondur</div>
   </main>
 </div>
 <div class="toast" id="toast"></div>
@@ -783,7 +783,7 @@ $$('[data-cmd]').forEach(b=>b.onclick=()=>{
     else if(c==='/hastalik')botSay('🌿 Son tarama: '+scans[0][2]+' ('+scans[0][3]+')');
   },450);
 });
-bubble('Merhaba! Ben Seranova botuyum. Aşağıdaki komutlarla seranızı uzaktan izleyip yönetebilirsiniz.','bot');
+bubble('Merhaba! Ben Novasera botuyum. Aşağıdaki komutlarla seranızı uzaktan izleyip yönetebilirsiniz.','bot');
 bubble('⚠️ Kamera 1: yaprak lekesi şüphesi (%87). Lütfen kontrol edin.','bot');
 bubble('💧 Sulama tamamlandı · 4 dk · 6.2 L','bot');
 
@@ -825,7 +825,7 @@ const Source={
 Source.load();
 
 function setSrcChip(){
-  $('#footNote').textContent=Source.mode==='sim'?'Seranova v0.1 · Demo sürümü – gösterilen veriler simülasyondur':'Seranova v0.1 · Canlı veri: Raspberry Pi API';
+  $('#footNote').textContent=Source.mode==='sim'?'Novasera v0.1 · Demo sürümü – gösterilen veriler simülasyondur':'Novasera v0.1 · Canlı veri: Raspberry Pi API';
   const dot=$('#srcDot'),txt=$('#srcTxt');
   if(Source.mode==='sim'){dot.className='dot sim';txt.textContent='Simülasyon'}
   else if(Source.status==='ok'){dot.className='dot';txt.textContent='Canlı veri'}
@@ -960,7 +960,7 @@ $('#csvBtn').onclick=()=>{
   hData.ts.forEach((t,i)=>rows.push([new Date(t).toLocaleString('tr-TR'),...K.map(k=>f(hData[k]&&hData[k][i]))]));
   const csv='\ufeff'+rows.map(r=>r.join(';')).join('\r\n');
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
-  a.download='seranova_'+(hHours===24?'24saat':hHours===168?'7gun':'30gun')+'.csv';document.body.appendChild(a);a.click();a.remove();toast('CSV indirildi');
+  a.download='novasera_'+(hHours===24?'24saat':hHours===168?'7gun':'30gun')+'.csv';document.body.appendChild(a);a.click();a.remove();toast('CSV indirildi');
 };
 
 /* ---------- uygulama (PWA) ---------- */

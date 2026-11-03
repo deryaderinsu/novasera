@@ -1,6 +1,6 @@
 {
-  "name": "Seranova – Akıllı Tarım Paneli",
-  "short_name": "Seranova",
+  "name": "Novasera – Akıllı Tarım Paneli",
+  "short_name": "Novasera",
   "description": "Sera sensörleri, hastalık uyarıları ve sulama kontrolü",
   "lang": "tr",
   "start_url": "./panel.html",

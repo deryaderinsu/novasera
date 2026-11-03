@@ -1,7 +1,7 @@
-/* Seranova service worker – önce ağ, olmazsa önbellek.
+/* Novasera service worker – önce ağ, olmazsa önbellek.
    Güncelleme yüklediğinizde uygulama yeni sürümü kendisi alır.
    Sürüm değişince eski önbellek silinsin diye VERSION'u artırın. */
-const VERSION = 'seranova-v1';
+const VERSION = 'novasera-v2';
 const SHELL = ['./panel.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
